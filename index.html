@@ -454,6 +454,9 @@
         </footer>
       </div>
     </div>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Back to top" title="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
     <script>
       // Nav scroll spy – highlights the active section in the sidebar nav
       (function(){
@@ -473,6 +476,20 @@
           });
         }, { rootMargin: '-20% 0px -60% 0px' });
         sections.forEach(function(section) { observer.observe(section); });
+      })();
+
+      // Back-to-top button – appears after scrolling on mobile only
+      (function(){
+        const btn = document.getElementById('scroll-to-top');
+        if (!btn) return;
+        btn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        const onScroll = function() {
+          btn.classList.toggle('visible', window.scrollY > 300);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
       })();
     </script>
   </body>
