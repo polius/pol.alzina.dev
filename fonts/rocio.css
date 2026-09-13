@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Rocio';
+  src: url('9PCS_Rocio_Default.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rocio';
+  src: url('9PCS_Rocio_I.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
