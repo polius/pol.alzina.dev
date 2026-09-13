@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charSet="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
@@ -27,20 +27,20 @@
     <noscript data-n-css=""></noscript>
   </head>
   <body class="overflow-x-hidden bg-night">
-    <div class="relative flex flex-col w-screen mx-auto font-sans text-base max-w-1440 text-dawn md:flex-row">
-      <div class="static flex flex-col justify-between w-full p-24-top sm:p-32 md:max-w-496 md:fixed md:h-screen lg:py-88 lg:pl-90 md:pr-72 lg:pr-0">
+    <div class="relative flex flex-col w-full mx-auto font-sans text-base max-w-1440 text-dawn md:flex-row">
+      <div class="intro-col static flex flex-col justify-between w-full p-24-top sm:p-32 md:max-w-496 md:fixed md:h-screen lg:py-88 lg:pl-90 md:pr-72 lg:pr-0">
         <div class="flex flex-col">
           <div>
-            <h1 class="font-rocio text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-sunrise animate-fade-in" style="font-size: 5em">Pol Alzina</h1>
+            <h1 class="font-rocio text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-sunrise animate-fade-in" style="font-size: clamp(40px, 12.5vw, 5em)">Pol Alzina</h1>
             <h2 class="font-rocio job-title mt-16 text-[22px] font-semibold leading-tight text-sunrise animate-fade-in animate-delay-1" style="line-height:34px; font-size: 24px">Software Engineer &amp; Cloud Architect at&nbsp;<a href="https://www.doit.com" target="_blank" class="underline" style="text-decoration-thickness: 2px; text-underline-offset: 3px">DoiT</a></h2>
             <div class="leading-loose animate-fade-in animate-delay-2">
-              <p style="font-size:1.2em; margin-top:32px; color:rgb(35,35,35); text-align:justify">
+              <p style="font-size: clamp(15px, 4.2vw, 1.2em); margin-top:32px; color:rgb(35,35,35); text-align:justify">
                 Deep expertise in AWS, Cloud Architecture, and database engineering.
               </p>
-              <p style="font-size:1.2em; margin-top:16px; color:rgb(35,35,35); text-align:justify">
+              <p style="font-size: clamp(15px, 4.2vw, 1.2em); margin-top:16px; color:rgb(35,35,35); text-align:justify">
                 Proven track record of architecting and optimizing large-scale, secure, and high-performance systems for critical business operations. Currently focused on building AI-powered solutions.
               </p>   
-              <p style="font-size:1.2em; margin-top:16px; color:rgb(35,35,35); text-align:justify">
+              <p style="font-size: clamp(15px, 4.2vw, 1.2em); margin-top:16px; color:rgb(35,35,35); text-align:justify">
                 With an entrepreneurial mindset. I design, build, and ship my own projects, end to end.
               </p>   
             </div>
@@ -62,9 +62,9 @@
             </ul>
           </nav>
         </div>
-        <div class="flex items-center w-full mt-32 animate-fade-in animate-delay-4" style="margin-top:56px">
-          <img alt="Pol Alzina" src="images/profile.jpg" width="64" decoding="async" data-nimg="1" class="rounded-full profile-ring" loading="lazy" style="color:transparent; margin-right:40px" />
-          <ul class="flex text-zenith" style="padding-right:10px; flex-wrap: nowrap; align-items: center; gap: 2px;">
+        <div class="profile-row flex items-center w-full mt-32 animate-fade-in animate-delay-4">
+          <img alt="Pol Alzina" src="images/profile.jpg" width="64" decoding="async" data-nimg="1" class="rounded-full profile-ring" loading="lazy" style="color:transparent" />
+          <ul class="flex social-links text-zenith" style="align-items: center;">
             <!-- Linkedin -->
             <li>
               <a class="social-link flex items-center" href="https://linkedin.com/in/polalzina" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn profile">
@@ -84,6 +84,7 @@
                 <span class="mt-px" style="font-weight: 500; font-size: 1em">GitHub</span>
               </a>
             </li>
+            <li class="social-break" aria-hidden="true"></li>
             <div class="social-sep" aria-hidden="true"></div>
             <!-- Mario Game -->
             <li>
@@ -96,18 +97,18 @@
             <div class="social-sep" aria-hidden="true"></div>
             <!-- RetroX Emulator -->
             <li>
-              <a class="social-link flex items-center" href="https://github.com/polius/RetroX" rel="noopener noreferrer" target="_blank" aria-label="RetroX">
+              <a class="social-link flex items-center" href="https://retrox.app" rel="noopener noreferrer" target="_blank" aria-label="RetroX">
                 <img src="images/retrox-logo.png" width="30" height="30">
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="static p-24 sm:p-32 md:max-w-536 lg:max-w-736 md:absolute md:right-0 lg:py-88 lg:pr-88 md:pl-0">
+      <div class="right-col static p-24 sm:p-32 md:absolute md:right-0 lg:py-88 lg:pr-88 md:pl-0">
           <!-- PROJECTS -->
           <div id="projects" class="md:pt-88 md:-mt-96">
-          <div class="absolute sticky top-0 z-40 pt-24 tracking-widest md:sr-only sticky-header" style="margin-left:-32px; margin-right:-32px; height:70px">
-            <h2 class="text-sm font-bold uppercase text-zenith" style="margin-left:40px; height:28px; cursor:default; font-size:1.2em">Projects</h2>
+          <div class="absolute sticky top-0 z-40 pt-24 tracking-widest md:sr-only sticky-header">
+            <h2 class="text-sm font-bold uppercase text-zenith" style="cursor:default">Projects</h2>
             <div class="z-50 w-full gradient-y-night-transparent shift-0 transition" style="margin-top:12px; height:50px"></div>
           </div>
           <h2 class="text-base font-bold uppercase text-slate-200 hidden md:block" style="margin-bottom:30px; color:rgb(35,35,35); cursor:default; font-size:1.2em; letter-spacing: 0.05em">Projects</h2>
@@ -284,8 +285,8 @@
         </div>
         <!-- Certifications -->
         <div id="certifications" class="md:pt-88">
-          <div class="absolute sticky top-0 z-40 pt-24 tracking-widest md:sr-only sticky-header" style="margin-left:-32px; margin-right:-32px; height:70px">
-            <h2 class="text-sm font-bold uppercase text-zenith" style="margin-left:40px; height:28px; cursor:default; font-size:1.2em;">Certifications</h2>
+          <div class="absolute sticky top-0 z-40 pt-24 tracking-widest md:sr-only sticky-header">
+            <h2 class="text-sm font-bold uppercase text-zenith" style="cursor:default">Certifications</h2>
             <div class="z-50 w-full gradient-y-night-transparent shift-0 transition" style="margin-top:12px; height:50px"></div>
           </div>
           <h2 class="text-base font-bold uppercase text-slate-200 hidden md:block" style="margin-bottom:30px; color:rgb(35,35,35); cursor:default; font-size:1.2em; letter-spacing: 0.05em">Certifications</h2>
@@ -301,7 +302,7 @@
                     <p style="color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Issued</p>
                     <p style="color:rgb(35,35,35); font-size: 14px">June 2025</p>
                     <p style="margin-top:12px; color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Credential ID</p>
-                    <p style="margin-top:2px; color:rgb(35,35,35)">2391698214af48799ac81487aa5f0353</p>
+                    <p style="margin-top:2px; overflow-wrap:anywhere; color:rgb(35,35,35)">2391698214af48799ac81487aa5f0353</p>
                   </div>
                   <div style="flex:1; margin-top:30px"></div>
                   <div class="text-zenith" style="display: inline-flex">
@@ -327,7 +328,7 @@
                     <p style="color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Issued</p>
                     <p style="color:rgb(35,35,35); font-size: 14px">April 2025</p>
                     <p style="margin-top:12px; color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Credential ID</p>
-                    <p style="margin-top:2px; color:rgb(35,35,35)">fcd564f483ae4cfa94ff9d164bcd5252</p>
+                    <p style="margin-top:2px; overflow-wrap:anywhere; color:rgb(35,35,35)">fcd564f483ae4cfa94ff9d164bcd5252</p>
                   </div>
                   <div style="flex:1; margin-top:30px"></div>
                   <div class="text-zenith" style="display: inline-flex">
@@ -353,7 +354,7 @@
                     <p style="color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Issued</p>
                     <p style="color:rgb(35,35,35); font-size: 14px">November 2024</p>
                     <p style="margin-top:12px; color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Credential ID</p>
-                    <p style="margin-top:2px; color:rgb(35,35,35)">151e5a1d30874c1f9817b374003370be</p>
+                    <p style="margin-top:2px; overflow-wrap:anywhere; color:rgb(35,35,35)">151e5a1d30874c1f9817b374003370be</p>
                   </div>
                   <div style="flex:1; margin-top:30px"></div>
                   <div class="text-zenith" style="display: inline-flex">
@@ -379,7 +380,7 @@
                     <p style="color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Issued</p>
                     <p style="color:rgb(35,35,35); font-size: 14px">September 2024</p>
                     <p style="margin-top:12px; color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Credential ID</p>
-                    <p style="margin-top:2px; color:rgb(35,35,35)">a61a0dd3cb1246a488893493e1e09986</p>
+                    <p style="margin-top:2px; overflow-wrap:anywhere; color:rgb(35,35,35)">a61a0dd3cb1246a488893493e1e09986</p>
                   </div>
                   <div style="flex:1; margin-top:30px"></div>
                   <div class="text-zenith" style="display: inline-flex">
@@ -405,7 +406,7 @@
                     <p style="color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Issued</p>
                     <p style="color:rgb(35,35,35); font-size: 14px">March 2024</p>
                     <p style="margin-top:12px; color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Credential ID</p>
-                    <p style="margin-top:2px; color:rgb(35,35,35)">18cd20d3a6d945a9bd944d0d09c38167</p>
+                    <p style="margin-top:2px; overflow-wrap:anywhere; color:rgb(35,35,35)">18cd20d3a6d945a9bd944d0d09c38167</p>
                   </div>
                   <div style="flex:1; margin-top:30px"></div>
                   <div class="text-zenith" style="display: inline-flex">
@@ -431,7 +432,7 @@
                     <p style="color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Issued</p>
                     <p style="color:rgb(35,35,35); font-size: 14px">May 2023</p>
                     <p style="margin-top:12px; color:rgb(35,35,35); font-weight: 600; font-size: 14px;">Credential ID</p>
-                    <p style="margin-top:2px; color:rgb(35,35,35)">PXWKZVH14BV1QS50</p>
+                    <p style="margin-top:2px; overflow-wrap:anywhere; color:rgb(35,35,35)">PXWKZVH14BV1QS50</p>
                   </div>
                   <div style="flex:1; margin-top:30px"></div>
                   <div class="text-zenith" style="display: inline-flex">
@@ -449,7 +450,7 @@
           </div>
         </div>
         <footer class="site-footer">
-          <p style="font-size: 14px">&copy; <script>document.write(new Date().getFullYear())</script> Pol Alzina. All rights reserved.</p>
+          <p style="font-size: 14px">&copy; <script>document.write(new Date().getFullYear())</script> All rights reserved.</p>
         </footer>
       </div>
     </div>
