@@ -216,7 +216,7 @@ section + section { margin-top: 72px; }
 .featured { display: grid; gap: 14px; }
 @media (min-width: 640px) {
   .featured { grid-template-columns: 1fr 1fr; }
-  .featured .card-hero { grid-column: 1 / -1; }
+  .featured .card:first-child { grid-column: 1 / -1; }
 }
 .card {
   position: relative;
@@ -250,7 +250,7 @@ section + section { margin-top: 72px; }
 }
 .stars svg { width: 13px; height: 13px; fill: #e8a317; }
 .card-desc { margin-top: 14px; color: var(--muted); font-size: 15px; }
-.card-hero .card-desc { font-size: 16px; max-width: 38rem; }
+.featured .card:first-child .card-desc { font-size: 16px; max-width: 38rem; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 /* Neutral tech tags: the cards already pick up colour from the background and the logos */
 .tags li {
@@ -338,7 +338,7 @@ section + section { margin-top: 72px; }
   padding: 28px 0 40px;
   border-top: 1px solid var(--border-strong);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: #000; /* same black as the LinkedIn/GitHub links */
 }
 .footer a { text-decoration: underline; text-decoration-color: currentColor; text-decoration-thickness: 1px; text-underline-offset: 4px; }
