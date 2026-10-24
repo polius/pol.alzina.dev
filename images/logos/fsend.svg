@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 100 100" fill="none" role="img" aria-label="fsend" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8C52"/>
+      <stop offset="1" stop-color="#F0532A"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#tile)"/>
+  <path d="M 28 31 L 47 50 L 28 69" stroke="#FFFBF9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="56" y="66.5" width="21" height="5" rx="2.5" fill="#FFFBF9"/>
+</svg>

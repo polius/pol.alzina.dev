@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pol.alzina.dev/sitemap.xml
