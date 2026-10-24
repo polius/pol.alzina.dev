@@ -102,7 +102,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   flex: none;
   width: 52px;
   height: 52px;
-  margin-right: 8px;
+  margin-right: 18px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
@@ -160,7 +160,21 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 
 /* Photo stays beside the buttons; on narrow screens the buttons wrap among themselves */
 .contact { display: flex; align-items: center; gap: 10px; margin-top: 32px; }
-.contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+/* Plain icon + label links (like the original site), quieter than buttons */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color .2s ease;
+}
+.social-link svg { width: 18px; height: 18px; fill: currentColor; }
+.social-link:hover { background: rgba(35, 35, 35, 0.08); }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -232,17 +246,19 @@ section + section { margin-top: 72px; }
   margin-top: 2px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--faint);
+  color: var(--muted);
 }
 .stars svg { width: 13px; height: 13px; fill: #e8a317; }
 .card-desc { margin-top: 14px; color: var(--muted); font-size: 15px; }
 .card-hero .card-desc { font-size: 16px; max-width: 38rem; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+/* Neutral tech tags: the cards already pick up colour from the background and the logos */
 .tags li {
   padding: 3px 10px;
   border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  border: 1px solid rgba(35, 35, 35, 0.08);
+  background: rgba(35, 35, 35, 0.06);
+  color: var(--muted);
   font-size: 12px;
   font-weight: 600;
 }
@@ -284,9 +300,9 @@ section + section { margin-top: 72px; }
 .list-name { font-weight: 700; font-size: 15px; }
 .list-desc { display: block; color: var(--muted); font-size: 14px; }
 .list .arrow { color: var(--faint); transition: transform .2s ease, color .2s ease; }
-.earlier { margin-top: 18px; color: var(--faint); font-size: 14px; }
-.earlier a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-strong); }
-.earlier a:hover { color: var(--text); text-decoration-color: var(--text); text-decoration-thickness: 2px; }
+.earlier { margin-top: 18px; color: #000; font-size: 14px; } /* same black as the LinkedIn/GitHub links */
+.earlier a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: currentColor; text-decoration-thickness: 1px; }
+.earlier a:hover { text-decoration-thickness: 2px; }
 
 /* Certifications */
 .certs { display: grid; gap: 10px; }
@@ -323,9 +339,9 @@ section + section { margin-top: 72px; }
   border-top: 1px solid var(--border-strong);
   font-size: 14px;
   font-weight: 600;
-  color: var(--text);
+  color: #000; /* same black as the LinkedIn/GitHub links */
 }
-.footer a { text-decoration: underline; text-decoration-color: var(--text); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.footer a { text-decoration: underline; text-decoration-color: currentColor; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 /* Links on the background image stay dark; hover thickens the underline */
 .footer a:hover { text-decoration-thickness: 2px; }
 
