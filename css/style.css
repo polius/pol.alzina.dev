@@ -54,7 +54,7 @@ body::before {
   background: #232323 url("../images/bg.webp") center / cover no-repeat;
 }
 /* Everything sitting directly on the image uses the high-contrast "on-bg" text colours */
-.intro, .section-title, .subhead, .earlier, .footer {
+.intro, .section-title, .subhead, .footer {
   --text: var(--on-bg);
   --muted: var(--on-bg-muted);
   --faint: var(--on-bg-faint);
@@ -300,9 +300,6 @@ section + section { margin-top: 72px; }
 .list-name { font-weight: 700; font-size: 15px; }
 .list-desc { display: block; color: var(--muted); font-size: 14px; }
 .list .arrow { color: var(--faint); transition: transform .2s ease, color .2s ease; }
-.earlier { margin-top: 18px; color: #000; font-size: 14px; } /* same black as the LinkedIn/GitHub links */
-.earlier a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: currentColor; text-decoration-thickness: 1px; }
-.earlier a:hover { text-decoration-thickness: 2px; }
 
 /* Certifications */
 .certs { display: grid; gap: 10px; }
