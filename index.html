@@ -4,13 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pol Alzina — Software Engineer &amp; Cloud Architect</title>
-    <meta name="description" content="Pol Alzina is a Software Engineer &amp; Cloud Architect at DoiT, specializing in AWS, cloud architecture and database engineering. Creator of FileSync and other open-source projects." />
+    <meta name="description" content="Pol Alzina is a Software Engineer &amp; Cloud Architect at DoiT based in Barcelona, specializing in AWS, cloud architecture and database engineering. Creator of FileSync and other open-source projects." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="author" content="Pol Alzina" />
     <link rel="canonical" href="https://pol.alzina.dev/" />
     <meta name="theme-color" content="#f6f3ee" />
 
     <!-- Social previews (LinkedIn, Slack, X…) need absolute URLs -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="Pol" />
+    <meta property="profile:last_name" content="Alzina" />
     <meta property="og:url" content="https://pol.alzina.dev/" />
     <meta property="og:site_name" content="Pol Alzina" />
     <meta property="og:title" content="Pol Alzina — Software Engineer &amp; Cloud Architect" />
@@ -21,6 +25,8 @@
     <meta property="og:image:alt" content="Pol Alzina — Software Engineer &amp; Cloud Architect" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
@@ -34,13 +40,161 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Pol Alzina",
-        "url": "https://pol.alzina.dev/",
-        "image": "https://pol.alzina.dev/images/profile.jpg",
-        "jobTitle": "Software Engineer & Cloud Architect",
-        "worksFor": { "@type": "Organization", "name": "DoiT", "url": "https://www.doit.com" },
-        "sameAs": ["https://www.linkedin.com/in/polalzina", "https://github.com/polius"]
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://pol.alzina.dev/#website",
+            "url": "https://pol.alzina.dev/",
+            "name": "Pol Alzina",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://pol.alzina.dev/#person"
+            }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://pol.alzina.dev/#profilepage",
+            "url": "https://pol.alzina.dev/",
+            "name": "Pol Alzina — Software Engineer & Cloud Architect",
+            "isPartOf": {
+              "@id": "https://pol.alzina.dev/#website"
+            },
+            "mainEntity": {
+              "@id": "https://pol.alzina.dev/#person"
+            },
+            "dateModified": "2026-11-05",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://pol.alzina.dev/#person",
+            "name": "Pol Alzina",
+            "givenName": "Pol",
+            "familyName": "Alzina",
+            "url": "https://pol.alzina.dev/",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://pol.alzina.dev/images/profile.jpg",
+              "width": 500,
+              "height": 500
+            },
+            "description": "Software Engineer & Cloud Architect at DoiT, specializing in AWS, cloud architecture and database engineering. Creator of FileSync.",
+            "jobTitle": "Software Engineer & Cloud Architect",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "DoiT",
+              "url": "https://www.doit.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Barcelona",
+              "addressCountry": "ES"
+            },
+            "knowsAbout": [
+              "Amazon Web Services (AWS)",
+              "Cloud architecture",
+              "Database engineering",
+              "MySQL",
+              "Amazon Aurora",
+              "Software engineering",
+              "AI-powered applications",
+              "WebRTC",
+              "Python",
+              "JavaScript",
+              "Go"
+            ],
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Claude Certified Associate – Foundations",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Anthropic",
+                  "url": "https://www.anthropic.com"
+                },
+                "dateCreated": "2026-09",
+                "url": "https://pol.alzina.dev/certifications/claude-certified-associate-foundations.pdf"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified Developer – Associate",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Amazon Web Services",
+                  "url": "https://aws.amazon.com"
+                },
+                "dateCreated": "2025-06",
+                "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/2391698214af48799ac81487aa5f0353"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified AI Practitioner",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Amazon Web Services",
+                  "url": "https://aws.amazon.com"
+                },
+                "dateCreated": "2025-04",
+                "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/fcd564f483ae4cfa94ff9d164bcd5252"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified Data Engineer – Associate",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Amazon Web Services",
+                  "url": "https://aws.amazon.com"
+                },
+                "dateCreated": "2024-11",
+                "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/151e5a1d30874c1f9817b374003370be"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified Solutions Architect – Professional",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Amazon Web Services",
+                  "url": "https://aws.amazon.com"
+                },
+                "dateCreated": "2024-09",
+                "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/a61a0dd3cb1246a488893493e1e09986"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified Database – Specialty",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Amazon Web Services",
+                  "url": "https://aws.amazon.com"
+                },
+                "dateCreated": "2024-03",
+                "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/18cd20d3a6d945a9bd944d0d09c38167"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified Solutions Architect – Associate",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Amazon Web Services",
+                  "url": "https://aws.amazon.com"
+                },
+                "dateCreated": "2023-05",
+                "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/PXWKZVH14BV1QS50"
+              }
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/polalzina",
+              "https://github.com/polius"
+            ]
+          }
+        ]
       }
     </script>
   </head>
