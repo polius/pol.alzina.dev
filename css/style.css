@@ -182,19 +182,16 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   height: 42px;
   padding: 0 18px;
   border-radius: 999px;
-  /* Light frosted fill: enough to keep the label readable over the busy background,
-     subtler than the cards so the buttons don't compete with the name */
+  /* Outline only: buttons sit on a frosted card, so they need no fill of their own */
   border: 1px solid rgba(35, 35, 35, 0.3);
-  background: rgba(255, 255, 255, 0.45);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  background: transparent;
   color: var(--text);
   font-size: 15px;
   font-weight: 600;
   transition: border-color .2s ease, background-color .2s ease;
 }
 .btn svg { width: 17px; height: 17px; fill: currentColor; }
-.btn:hover { background: var(--surface); border-color: var(--text); }
+.btn:hover { background: rgba(35, 35, 35, 0.06); border-color: var(--text); }
 
 /* ---------- Content column ---------- */
 .content { padding: 40px 0 0; }
