@@ -373,28 +373,35 @@
 
           <h3 class="subhead">More projects</h3>
           <ul class="list">
-            <li data-sort-repo="meteornext-app">
+            <li>
+              <a href="https://github.com/polius/wd-mycloud-docker" target="_blank" rel="noopener noreferrer">
+                <img class="logo" src="images/logos/wd-mycloud-docker.png" width="32" height="32" alt="" />
+                <span><span class="list-name">Docker for WD My Cloud</span><span class="list-desc">Official Docker Engine for WD My Cloud OS5 NAS, installed and updated from the dashboard.</span></span>
+                <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </li>
+            <li>
               <a href="https://meteor.alzina.dev" target="_blank" rel="noopener noreferrer">
                 <img class="logo" style="--logo-scale: 1.05" src="images/logos/meteornext.png" width="32" height="32" alt="" />
                 <span><span class="list-name">Meteor Next</span><span class="list-desc">Web app that automates MySQL database operations at scale.</span></span>
                 <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
             </li>
-            <li data-sort-repo="SPLIT">
+            <li>
               <a href="https://split.alzina.dev" target="_blank" rel="noopener noreferrer">
                 <img class="logo" src="images/logos/split.svg" width="32" height="32" alt="" />
                 <span><span class="list-name">SPLIT</span><span class="list-desc">Self-hosted expense splitter for shared costs and balances.</span></span>
                 <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
             </li>
-            <li data-sort-repo="intelligent-s3-upload">
+            <li>
               <a href="https://github.com/polius/intelligent-s3-upload" target="_blank" rel="noopener noreferrer">
                 <img class="logo" src="images/logos/is3u.png" width="32" height="32" alt="" />
                 <span><span class="list-name">IS3U</span><span class="list-desc">Reliable Amazon S3 uploads with multipart upload and automatic retries.</span></span>
                 <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
             </li>
-            <li data-sort-repo="vegeta.cat">
+            <li>
               <a href="https://www.vegeta.cat" target="_blank" rel="noopener noreferrer">
                 <img class="logo" src="images/logos/vegeta.png" width="32" height="32" alt="" />
                 <span><span class="list-name">Vegeta</span><span class="list-desc">Archive of Catalan anime openings and endings from the '90s to the 2010s.</span></span>
@@ -525,10 +532,11 @@
               el.textContent = format(total);
             });
 
-            // Order featured cards and the "More projects" list by stars, most first.
+            // Order featured cards by stars, most first.
             // Ties keep their HTML order; items without a repo stay at the end.
+            // The "More projects" list stays in HTML order since it shows no star counts.
             // The first featured card gets the wide layout via CSS.
-            document.querySelectorAll(".featured, .list").forEach(function (group) {
+            document.querySelectorAll(".featured").forEach(function (group) {
               var items = Array.prototype.slice.call(group.querySelectorAll(":scope > [data-sort-repo]"));
               items.sort(function (a, b) {
                 return (stars[b.dataset.sortRepo.toLowerCase()] || 0) - (stars[a.dataset.sortRepo.toLowerCase()] || 0);
@@ -544,7 +552,7 @@
               if (!top || count > top.count) top = { item: item, count: count };
             });
             if (top) {
-              var name = top.item.querySelector(".card-title a, .list-name");
+              var name = top.item.querySelector(".card-title a");
               document.querySelectorAll("[data-top-name]").forEach(function (el) { el.textContent = name.textContent; });
               document.querySelectorAll("[data-top-stars]").forEach(function (el) { el.textContent = format(top.count); });
             }
