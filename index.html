@@ -224,6 +224,8 @@
 
             <ul class="stats" aria-label="Highlights">
               <li><strong data-stars-total>2,122</strong> GitHub stars</li>
+              <!-- Total covers every Docker image, including ones not shown as cards -->
+              <li><strong data-downloads-total data-docker-extra="poliuscorp/split poliuscorp/plexy">79k</strong> downloads</li>
               <li><strong>7</strong> certifications</li>
               <li><strong data-projects-total>15</strong> projects shipped</li>
             </ul>
@@ -594,13 +596,27 @@
               return isNaN(n) ? Promise.reject(data.value) : n;
             });
         }
+        function sum(counts) {
+          return counts.reduce(function (a, b) { return a + b; }, 0);
+        }
+
+        var all = [];
         document.querySelectorAll("[data-docker]").forEach(function (el) {
           var sources = [badge("docker/pulls/" + el.dataset.docker)];
           if (el.dataset.releases) sources.push(badge("github/downloads/" + el.dataset.releases + "/total"));
-          Promise.all(sources)
-            .then(function (counts) {
-              el.textContent = format(counts.reduce(function (a, b) { return a + b; }, 0));
-            })
+          var count = Promise.all(sources).then(sum);
+          count.then(function (n) { el.textContent = format(n); }, function () {});
+          all.push(count);
+        });
+
+        // The intro total adds images that have no card; if any source fails it keeps
+        // the HTML fallback rather than showing an undercount
+        document.querySelectorAll("[data-downloads-total]").forEach(function (el) {
+          var extra = (el.dataset.dockerExtra || "").split(/\s+/).filter(Boolean).map(function (image) {
+            return badge("docker/pulls/" + image);
+          });
+          Promise.all(all.concat(extra))
+            .then(function (counts) { el.textContent = format(sum(counts)); })
             .catch(function () {});
         });
       })();

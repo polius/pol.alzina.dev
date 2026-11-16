@@ -135,6 +135,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .stats { display: flex; flex-wrap: wrap; gap: 10px clamp(18px, 5vw, 28px); margin-top: 28px; }
 .stats li { display: flex; flex-direction: column; font-size: 14px; font-weight: 500; color: var(--text); }
 .stats strong { font-size: 22px; line-height: 1.2; font-weight: 700; color: var(--text); }
+/* Four stats don't fit one row on phones: use a tidy 2×2 grid instead of a 3 + 1 wrap */
+@media (max-width: 479px) {
+  .stats { display: grid; grid-template-columns: repeat(2, max-content); column-gap: 40px; row-gap: 14px; }
+}
 
 .nav { display: none; margin-top: 44px; }
 @media (min-width: 1024px) { .nav { display: block; } }
